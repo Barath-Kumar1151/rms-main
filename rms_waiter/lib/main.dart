@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'src/app/app.dart';
+import 'package:rms_core/rms_core.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // The brand on screen before anything else, for the length of the work
+  // below. That work is not optional and it is not instant — a keystore
+  // read and a preferences open on a cold start on a mid-range till — and
+  // what used to fill it was the framework's bare white window. The
+  // `runApp` below replaces this one; nothing downstream knows it existed.
+  runApp(SplashScreen.app(
+    flavor: AppFlavor.waiter,
+    title: 'RMS Waiter',
+    icon: Icons.restaurant_menu_rounded,
+  ));
+
+  // DateFormat throws on a locale whose symbols were never loaded, so this
+  // must finish before the first timestamp is rendered.
+  await LocaleBinding.ensureInitialised();
+
+  // Session.load reads the platform keystore, so it must complete before the
+  // first frame — otherwise the router would briefly decide the user is signed
+  // out and bounce a signed-in waiter to the login screen on every cold start.
+  final session = await Session.load();
+
+  // Saved ticket drafts are read synchronously while the floor screen builds,
+  // so the store cannot be opened lazily. `getInstance` is cached — Session has
+  // already paid for it.
+  final prefs = await SharedPreferences.getInstance();
+
+  runApp(
+    ProviderScope(
+      overrides: [
+        sessionProvider.overrideWithValue(session),
+        sharedPreferencesProvider.overrideWithValue(prefs),
+      ],
+      child: const WaiterApp(),
+    ),
+  );
+}

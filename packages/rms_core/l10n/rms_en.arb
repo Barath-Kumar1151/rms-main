@@ -1,0 +1,109 @@
+{
+  "@@locale": "en",
+  "tryAgain": "Try again",
+  "@tryAgain": {
+    "description": "Retry button on an error surface."
+  },
+  "errorNoConnectionTitle": "No connection",
+  "errorSignedOutTitle": "Signed out",
+  "errorNotAllowedTitle": "Not allowed",
+  "errorNotFoundTitle": "Not found",
+  "errorRejectedTitle": "Could not be done",
+  "errorServerTitle": "Server problem",
+  "errorUnknownTitle": "Something went wrong",
+  "errorReference": "Ref: {traceId}",
+  "@errorReference": {
+    "description": "Support correlation id shown under an error.",
+    "placeholders": {
+      "traceId": {
+        "type": "String"
+      }
+    }
+  },
+  "signIn": "Sign in",
+  "signInHeading": "Sign in to continue",
+  "signInBlurb": "Your restaurant, on every device.",
+  "signInEmail": "Email",
+  "signInPassword": "Password",
+  "signInEmailMissing": "Enter your email",
+  "signInPasswordMissing": "Enter your password",
+  "signInShowPassword": "Show password",
+  "signInHidePassword": "Hide password",
+  "serverSettings": "Server settings",
+  "serverSettingsBlurb": "The address of your restaurant server. Ask your manager if you are not sure.",
+  "serverAddress": "Server address",
+  "serverAddressMissing": "Enter the server address",
+  "serverAddressNeedsScheme": "Include http:// or https://",
+  "serverDefaultForBuild": "Default for this build ({environment}): {url}",
+  "@serverDefaultForBuild": {
+    "placeholders": {
+      "environment": {
+        "type": "String"
+      },
+      "url": {
+        "type": "String"
+      }
+    }
+  },
+  "save": "Save",
+  "signOut": "Sign out",
+  "outletsEmptyTitle": "No outlets available",
+  "outletsEmptyMessage": "Your account is not assigned to any outlet. Ask your manager to add you to one.",
+  "outletsLoading": "Loading outlets…",
+  "outletClosed": "This outlet is closed",
+  "outletNotConfigured": "Not set up for service yet — ask your manager",
+  "checkAgain": "Check again",
+  "orderStatusDraft": "Draft",
+  "orderStatusPlaced": "Placed",
+  "orderStatusConfirmed": "Confirmed",
+  "orderStatusPreparing": "Cooking",
+  "orderStatusReady": "Ready",
+  "orderStatusServed": "Served",
+  "orderStatusSettled": "Settled",
+  "orderStatusCancelled": "Cancelled",
+  "orderStatusVoided": "Voided",
+  "orderStatusUnknown": "Unknown",
+  "tableStatusAvailable": "Free",
+  "tableStatusReserved": "Reserved",
+  "tableStatusWaiting": "Waiting",
+  "tableStatusOccupied": "Seated",
+  "tableStatusCleaning": "Cleaning",
+  "tableStatusUnknown": "Unknown",
+  "deliveryStatusPending": "Unassigned",
+  "deliveryStatusAssigned": "Assigned",
+  "deliveryStatusPickedUp": "Picked up",
+  "deliveryStatusEnRoute": "On the way",
+  "deliveryStatusDelivered": "Delivered",
+  "deliveryStatusFailed": "Failed",
+  "deliveryStatusCancelled": "Cancelled",
+  "deliveryStatusUnknown": "Unknown",
+  "deliveryActionPickUp": "Picked up",
+  "deliveryActionStart": "Start delivery",
+  "deliveryActionDeliver": "Deliver with OTP",
+  "paymentCash": "Cash",
+  "paymentCard": "Card",
+  "paymentWallet": "Wallet",
+  "paymentOnline": "Online",
+  "waitJustNow": "just now",
+  "waitMinutes": "{minutes} min",
+  "waitHoursMinutes": "{hours}h {minutes}m",
+  "chooseOutlet": "Choose your outlet",
+  "chooseOutletBlurb": "Everything you see is scoped to this outlet.",
+  "@waitMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "@waitHoursMinutes": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
+}

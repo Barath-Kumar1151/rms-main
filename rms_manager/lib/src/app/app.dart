@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'package:rms_core/rms_core.dart';
+import '../l10n/app_localizations.dart';
+import 'live_sync.dart';
+import 'router/app_router.dart';
+
+class ManagerApp extends ConsumerWidget {
+  const ManagerApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    return MaterialApp.router(
+      title: 'RMS Manager',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.light(flavor: AppFlavor.manager),
+      darkTheme: AppTheme.dark(flavor: AppFlavor.manager),
+      routerConfig: ref.watch(routerProvider),
+      // English today, Urdu proven end to end — including right-to-left
+      // layout, which is the part that breaks silently if nobody exercises it.
+      // The remaining screens still read English literals; see the l10n note
+      // in rms_core.
+      localizationsDelegates: const [
+        RmsLocalizations.delegate,
+        AppText.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppText.supportedLocales,
+      builder: (context, child) {
+        final media = MediaQuery.of(context);
+        return MediaQuery(
+          data: media.copyWith(
+            // Clamped like the waiter's: past ~1.3x the KPI tiles reflow far
+            // enough that the figures start truncating, and a truncated number
+            // is worse than a slightly small one.
+            textScaler: media.textScaler.clamp(
+              minScaleFactor: 0.9,
+              maxScaleFactor: 1.3,
+            ),
+          ),
+          // Keeps DateFormat/NumberFormat on the same locale as the
+          // strings; see LocaleBinding.
+          child: LocaleBinding(child: LiveSync(child: child ?? const SizedBox.shrink())),
+        );
+      },
+    );
+  }
+}

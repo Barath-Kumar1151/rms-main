@@ -1,0 +1,124 @@
+{
+  "@@locale": "en",
+  "runsTitle": "Runs",
+  "switchOutlet": "Switch outlet",
+  "signOut": "Sign out",
+  "runsLoading": "Loading your runs…",
+  "nothingToDeliverTitle": "Nothing to deliver",
+  "nothingToDeliverMessage": "New runs appear here as the kitchen dispatches them. Pull down to check again.",
+  "sectionOnTheGo": "On the go",
+  "sectionDoneToday": "Done today",
+  "noAddress": "No address on file",
+  "etaMinutes": "ETA {minutes} min",
+  "@etaMinutes": {
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "assignedAt": "assigned {time}",
+  "@assignedAt": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "notYours": "{provider} — not yours to drive",
+  "@notYours": {
+    "placeholders": {
+      "provider": {
+        "type": "String"
+      }
+    }
+  },
+  "run": "Run",
+  "dropOff": "Drop-off",
+  "noAddressCall": "No address on file — call the restaurant.",
+  "copy": "Copy",
+  "coordinatesCopied": "Coordinates copied — paste into Maps.",
+  "sharingLocation": "Sharing your location",
+  "locationOff": "Location off",
+  "sharingOnHint": "The customer can see roughly where you are. It stops when the run finishes.",
+  "sharingOffHint": "Turn on while you are carrying this order so the customer can follow it.",
+  "lastSent": "Last sent {time} · {count} updates",
+  "@lastSent": {
+    "placeholders": {
+      "time": {
+        "type": "String"
+      },
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "locationServiceOff": "Location is switched off on this phone. Turn it on in the pull-down settings, then try again.",
+  "locationDenied": "The app was not given permission this time. Tap the switch again to be asked once more.",
+  "locationBlocked": "Location permission is blocked for this app. It can only be turned back on in the phone's Settings → Apps.",
+  "locationForegroundOnly": "Tracking only works while this screen is open. To keep the customer's map moving with the phone in your pocket, allow location \"all the time\" in Settings.",
+  "progress": "Progress",
+  "progressAssigned": "Assigned",
+  "progressPickedUp": "Picked up",
+  "progressDelivered": "Delivered",
+  "runIsStatus": "This run is {status}.",
+  "@runIsStatus": {
+    "placeholders": {
+      "status": {
+        "type": "String"
+      }
+    }
+  },
+  "aggregatorCarrying": "{provider} is carrying this one. Track it through their app — nothing here changes it.",
+  "@aggregatorCarrying": {
+    "placeholders": {
+      "provider": {
+        "type": "String"
+      }
+    }
+  },
+  "waitingForAssignment": "Waiting for the restaurant to assign this run.",
+  "somethingWentWrong": "Something went wrong",
+  "confirmHandover": "Confirm the handover",
+  "askForCode": "Ask the customer to read out the code on their order.",
+  "deliveryCode": "Delivery code",
+  "cancel": "Cancel",
+  "delivered": "Delivered",
+  "failNobodyThere": "Nobody at the address",
+  "failRefused": "Customer refused the order",
+  "failAddressNotFound": "Address could not be found",
+  "failNoCode": "Customer would not give the code",
+  "failVehicle": "Accident or vehicle problem",
+  "whatHappened": "What happened?",
+  "markFailedTitle": "Mark this run failed?",
+  "markFailedMessage": "\"{reason}\"\n\nThe restaurant is told straight away. This cannot be undone from here.",
+  "@markFailedMessage": {
+    "placeholders": {
+      "reason": {
+        "type": "String"
+      }
+    }
+  },
+  "goBack": "Go back",
+  "markFailed": "Mark failed",
+  "driverSignIn": "Driver sign in",
+  "whichKitchen": "Which kitchen?",
+  "runAssigned": "A run has been assigned.",
+  "startShift": "Start shift",
+  "endShift": "End shift",
+  "offShift": "Off shift — you will not be given deliveries",
+  "onShiftSummary": "On shift · {live} in hand · {done} delivered today",
+  "@onShiftSummary": {
+    "placeholders": {
+      "live": {
+        "type": "int"
+      },
+      "done": {
+        "type": "int"
+      }
+    }
+  },
+  "riderNotLinked": "This login is not linked to a rider yet. Ask your manager to link it on the rider roster.",
+  "riderProfileUnavailable": "Could not load your rider details.",
+  "yourRunsOnly": "These are your runs only. A job you cannot see has been given to another rider."
+}
